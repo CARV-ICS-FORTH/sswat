@@ -1,0 +1,27 @@
+#GENERAL
+working_directory: /home/user/target_dir
+application: exmp
+kvm_support: off
+
+proc_selection: 1 2 3 4 
+
+proc_1: /proc/diskstats dev
+proc_2: /proc/stat CPU
+proc_3: /proc/fs/xfs/stat xfs_counters
+proc_4: /proc/interrupts ints
+
+#OPROFILE_CONF
+oprof_vmlinux_path: /usr/src/linux/vmlinux
+oprof_kernel_module_paths: /home/user/target_module_dir
+
+oprof_event: CPU_CLK_UNHALTED
+oprof_threshold: 150000
+oprof_mode: separate #use "separate" to get per-cpu analysis, "none" for standard results
+
+#ANALYSIS
+#Device names for iostat analysis (seperated by spaces)
+device_list: sda sdb sdc
+
+#GRAPHING
+filesystem: xfs
+graph_functions: 4

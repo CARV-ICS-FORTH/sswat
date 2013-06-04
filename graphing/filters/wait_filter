@@ -1,0 +1,13 @@
+__init_waitqueue_head
+add_wait_queue
+add_wait_queue_exclusive
+remove_wait_queue
+prepare_to_wait
+prepare_to_wait_exclusive
+finish_wait
+abort_exclusive_wait
+autoremove_wake_function
+wake_bit_function
+__wake_up_bit
+wake_up_bit
+bit_waitqueue
